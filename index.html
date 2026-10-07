@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Count Quest – Counting Puzzle Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Layered animated background -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg-gradient"></div>
+    <div class="bg-aurora">
+      <i class="blob blob-purple"></i>
+      <i class="blob blob-blue"></i>
+      <i class="blob blob-cyan"></i>
+      <i class="blob blob-orange"></i>
+    </div>
+    <div class="bg-grid"></div>
+    <div class="bg-symbols" id="symbols"></div>
+    <div class="bg-particles" id="particles"></div>
+    <div class="bg-spotlight" id="spotlight"></div>
+  </div>
+
+  <button id="soundBtn" class="sound-toggle" aria-label="Mute sound" aria-pressed="false" title="Mute sound">♫</button>
+  <div id="effects" class="effects" aria-hidden="true"></div>
+
+  <!-- Start screen -->
+  <section id="start" class="screen active">
+    <div class="eyebrow">A LITTLE THINKING. A LOT OF FUN.</div>
+    <h1 class="title">Count Quest</h1>
+    <p class="sub">Small puzzles. Big wins.</p>
+    <div class="arcade-scene">
+      <span class="floating-block block-coral" aria-hidden="true">×</span>
+      <span class="floating-block block-mint" aria-hidden="true">+</span>
+      <span class="floating-block block-gold" aria-hidden="true">?</span>
+      <img id="gameArt" class="game-art" src="toys.png" alt="Colorful counting blocks, marbles and a trophy" width="1024" height="1024" />
+      <span class="scene-spark spark-one" aria-hidden="true">✦</span>
+      <span class="scene-spark spark-two" aria-hidden="true">✧</span>
+    </div>
+    <div class="start-stats"><span>❤️ <b>3 lives</b></span><span>⭐ <b>Earn points</b></span><span>🏆 <b>5 levels</b></span></div>
+    <button class="btn start-button" id="startBtn">Let's play <span aria-hidden="true">→</span></button>
+    <div class="level-road" aria-label="Five levels"><span class="road-stop">1</span><i></i><span class="road-stop">2</span><i></i><span class="road-stop">3</span><i></i><span class="road-stop">4</span><i></i><span class="road-stop">5</span></div>
+    <div class="mini-puzzle"><p>Quick warm-up: 2 shirts × 3 pants = ?</p><div id="warmupOptions"><button class="mini-choice" data-value="5">5</button><button class="mini-choice" data-value="6">6</button><button class="mini-choice" data-value="8">8</button></div><p id="warmupFeedback" aria-live="polite"> </p></div>
+  </section>
+
+  <!-- Game screen -->
+  <section id="game" class="screen">
+    <header class="hud">
+      <div class="badge" id="levelPill"><span class="badge-icon" aria-hidden="true">◆</span><span id="levelName">Level 1</span></div>
+      <div class="pill hearts" id="lives" aria-label="Lives left">❤️❤️❤️</div>
+      <div class="pill score-pill" id="scorePill"><span class="score-icon" aria-hidden="true">⭐</span><span id="score">0</span></div>
+      <div class="ring" id="ring" aria-label="Time left">
+        <svg viewBox="0 0 44 44" aria-hidden="true">
+          <circle class="ring-track" cx="22" cy="22" r="19"></circle>
+          <circle class="ring-fill" id="ringFill" cx="22" cy="22" r="19"></circle>
+        </svg>
+        <span id="timer">30</span>
+      </div>
+    </header>
+
+    <div class="progress" role="progressbar" aria-label="Level progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <div class="track" id="track"></div>
+
+    <div class="card" id="card">
+      <div class="tag" id="topic">Topic</div>
+      <p class="question" id="question"></p>
+      <div class="options" id="options"></div>
+      <div class="feedback hidden" id="feedback" aria-live="polite">
+        <div id="answerIcon" class="answer-icon" aria-hidden="true"></div>
+        <h3 id="fbTitle"></h3>
+        <p id="fbText"></p>
+        <button class="btn" id="nextBtn">Next</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Level up screen -->
+  <section id="levelUp" class="screen">
+    <div class="celebration-icon" aria-hidden="true">🏆</div>
+    <h2 class="title" id="luTitle">Level Clear!</h2>
+    <p class="sub" id="luText"></p>
+    <div class="track big" id="luTrack"></div>
+    <p class="next-ready" id="nextReady"></p>
+    <button class="btn" id="luBtn">Next Level</button>
+  </section>
+
+  <!-- End screen -->
+  <section id="end" class="screen">
+    <h2 class="title" id="endTitle">Game Over</h2>
+    <p class="sub" id="endText"></p>
+    <div class="track big" id="endTrack"></div>
+    <p class="end-hint">Fresh lives, fresh score. Start a new game or go back to the start.</p>
+    <div class="end-actions">
+      <button class="btn" id="againBtn">Start New Game <span aria-hidden="true">↻</span></button>
+      <button class="btn ghost" id="homeBtn">Back to Start</button>
+    </div>
+  </section>
+
+  <script src="game.js"></script>
+</body>
+</html>
