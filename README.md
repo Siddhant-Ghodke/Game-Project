@@ -1,1 +1,28 @@
-Graph Theory Pathfinder 🚀Graph Theory Pathfinder is an interactive web-based game where players master graph theory concepts like BFS, DFS, Dijkstra, and Eulerian paths through visual network puzzles. Think, connect, traverse, and conquer progressive levels while earning XP and unlocking achievements.   🎮 How to PlayRead the mission instructions for each level.   Analyze the graph layout and click on vertices (nodes) to build a valid path or solution following the edges.   Submit your answer to score points, earn XP, and unlock subsequent levels.   Use hints if you get stuck, but watch out for point deductions.   🧠 Core Concepts CoveredVertices & Edges: Counting nodes, connections, and evaluating vertex degrees.   Connectivity: Exploring paths, reachable nodes, and connected components.   Shortest Path: Calculating minimum-cost paths using Dijkstra's algorithm.   Eulerian & Hamiltonian Paths: Finding traversals that visit every edge or every vertex.   Graph Traversals: Simulating Breadth-First Search (BFS) and Depth-First Search (DFS) orders.   🛠️ Tech StackHTML5: Provides the semantic layout, SVG canvas for dynamic graph rendering, and UI overlays.   CSS3: Powers the sci-fi glassmorphism styling, responsive grid alignment, and keyframe animations.   JavaScript (ES6+): Drives the core game loop, procedural random graph generation, level progression, and algorithmic validations (Dijkstra, BFS, DFS, Hamiltonian, Eulerian). 
+# Graph Theory Pathfinder 🚀
+
+Graph Theory Pathfinder is an interactive web-based game where players master graph theory concepts like BFS, DFS, Dijkstra, and Eulerian paths through visual network puzzles. Think, connect, traverse, and conquer progressive levels while earning XP and unlocking achievements.
+
+## 🎮 How to Play
+* Read the mission instructions for each level.
+* Analyze the graph layout and click on vertices (nodes) to build a valid path or solution following the edges.
+* Submit your answer to score points, earn XP, and unlock subsequent levels.
+* Use hints if you get stuck, but watch out for point deductions.
+
+## 🧠 Core Concepts Covered
+* **Vertices & Edges:** Counting nodes, connections, and evaluating vertex degrees.
+* **Connectivity:** Exploring paths, reachable nodes, and connected components.
+* **Shortest Path:** Calculating minimum-cost paths using Dijkstra's algorithm.
+* **Eulerian & Hamiltonian Paths:** Finding traversals that visit every edge or every vertex.
+* **Graph Traversals:** Simulating Breadth-First Search (BFS) and Depth-First Search (DFS) orders.
+
+## 🛠️ Tech Stack
+* **HTML5:** Provides the semantic layout, SVG canvas for dynamic graph rendering, and UI overlays.
+* **CSS3:** Powers the sci-fi glassmorphism styling, responsive grid alignment, and keyframe animations.
+* **JavaScript (ES6+):** Drives the core game loop, procedural random graph generation, level progression, and algorithmic validations.
+
+## 🚀 Getting Started
+To run this project locally, clone the repository and open the game in your favorite web browser:
+```bash
+git clone [https://github.com/your-username/graph-theory-pathfinder.git](https://github.com/your-username/graph-theory-pathfinder.git)
+cd graph-theory-pathfinder
+# Open index (3).html in your browser
